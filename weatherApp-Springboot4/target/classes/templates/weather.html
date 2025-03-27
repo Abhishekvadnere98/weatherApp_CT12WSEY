@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather in ${city}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-200 flex justify-center items-center h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+        <h1 class="text-3xl font-bold mb-4">Weather in <span class="text-blue-500">${city}</span></h1>
+        <img src="https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png" alt="Weather Icon">
+        <p class="text-xl">Temperature: <span class="font-bold">${weather.main.temp}°C</span></p>
+        <p class="text-lg">Humidity: <span>${weather.main.humidity}%</span></p>
+        <p class="text-lg">Wind Speed: <span>${weather.wind.speed} m/s</span></p>
+        <p class="text-lg">Condition: <span class="italic">${weather.weather[0].description}</span></p>
+        <a href="/" class="mt-4 inline-block bg-blue-500 text-white px-4 py-2 rounded-md">Search Again</a>
+    </div>
+</body>
+</html> 
